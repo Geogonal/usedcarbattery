@@ -25,18 +25,44 @@ function speedCart(cd)
     end
 end
 
+function speedMyCart()
+    for i = 1, 25 do
+        fireclickdetector(game:GetService('Players').LocalPlayer.Character.Humanoid.SeatPart.Parent.forward.ClickDetector, 10000)
+    end
+end
+
 Tab:AddButton({
-	Name = "Button!",
+	Name = "All cart speed",
 	Callback = function()
-      	OrionLib:MakeNotification({
-            Name = "Title",
-            Content = "Content",
-            Time = 5
-        })
+        for i, v in pairs(getCarts()) do
+            speedCart(v)
+        end
+        
+        
+        
+
+  	end
+})
+Tab:AddButton({
+	Name = "All cart speed",
+	Callback = function()
+
     
         for i, v in pairs(getCarts()) do
             speedCart(v)
         end
+        
+        
+        
+
+  	end
+})
+Tab:AddButton({
+	Name = "Speed my cart",
+	Callback = function()
+
+    
+        speedMyCart()
         
         
         
