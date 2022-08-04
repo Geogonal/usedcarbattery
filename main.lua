@@ -20,7 +20,7 @@ function getCarts()
 end
 
 function speedCart(cd)
-    for num = 1, 250 do
+    for num = 1, 50 do
         fireclickdetector(cd, 10000)
     end
 end
