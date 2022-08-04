@@ -34,18 +34,6 @@ end
 Tab:AddButton({
 	Name = "All cart speed",
 	Callback = function()
-        for i, v in pairs(getCarts()) do
-            speedCart(v)
-        end
-        
-        
-        
-
-  	end
-})
-Tab:AddButton({
-	Name = "All cart speed",
-	Callback = function()
 
     
         for i, v in pairs(getCarts()) do
