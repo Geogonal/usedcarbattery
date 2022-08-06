@@ -45,6 +45,23 @@ Tab:AddButton({
 
   	end
 })
+
+Tab:AddButton({
+	Name = "Spawn carts",
+	Callback = function()
+
+    
+        for i, v in pairs(game.Workspace:GetChildren()) do
+            if string.find(v.Name, 'respawner')  and v:IsA('Model') then
+                firetouchinterest(game:GetService('Players').LocalPlayer.Character.HumanoidRootPart, v.respawn.TouchInterest, 0)
+            end
+        end
+        
+        
+        
+
+  	end
+})
 Tab:AddButton({
 	Name = "Speed my cart",
 	Callback = function()
