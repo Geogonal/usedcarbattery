@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Window = OrionLib:MakeWindow({Name = "Used Car Battery"})
-local Tab = Window:MakeTab({Name = 'Tab 1', Icon = 'rbxassetid://2605986486', PremiumOnly = false})
+local Tab = Window:MakeTab({Name = 'Carts', Icon = 'rbxassetid://2605986486', PremiumOnly = false})
 local Section = Tab:AddSection({
 	Name = "Buttons"
 })
