@@ -50,10 +50,11 @@ Tab:AddButton({
 	Name = "Spawn carts",
 	Callback = function()
 
-    
-        for i, v in pairs(game.Workspace:GetChildren()) do
-            if string.find(v.Name, 'respawner')  and v:IsA('Model') then
-                firetouchinterest(game:GetService('Players').LocalPlayer.Character.HumanoidRootPart, v.respawn.TouchInterest, 0)
+        for i, v in pairs(game.Workspace:GetDescendants()) do
+            if v.Name == 'TouchInterest' and v.Parent.Name == 'respawn' and v.Parent.Parent.Name ~= 'DREAMrespawner' and v.Parent.Parent.Name ~= 'superiorrespawner' then
+                firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 0)
+                wait(0.01)
+                firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 1)
             end
         end
         
